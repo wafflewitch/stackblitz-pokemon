@@ -1,18 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./style.css";
 
 export default function App() {
   return (
-    <section className="showcase">
-      <section className="nes-container with-title is-centered">
+    <Fragment>
+      <div className="nes-container with-title is-centered">
         <h3 className="title">hello trainer</h3>
-        <div className="item">
+        <div>
           <p>choose your pokemon!</p>
           <a onClick={ () => {document.getElementById('dialog-squirtle').showModal();}}><i className="nes-squirtle"></i></a><br />
           <a onClick={ () => {document.getElementById('dialog-charmander').showModal();}}><i className="nes-charmander"></i></a><br />
           <a onClick={ () => {document.getElementById('dialog-bulbasaur').showModal();}}><i className="nes-bulbasaur"></i></a>
         </div>
-      </section>
+      </div>
 
         <dialog class="nes-dialog is-rounded" id="dialog-squirtle">
           <form method="dialog">
@@ -40,6 +40,6 @@ export default function App() {
             </menu>
           </form>
         </dialog>
-    </section>
+    </Fragment>
   );
 }
